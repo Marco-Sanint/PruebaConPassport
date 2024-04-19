@@ -1,3 +1,5 @@
+//server.js
+
 const express = require('express');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
@@ -24,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 passport.use(new PassportLocal(function(username, password, done){
-    if(username === "cod" && password === "123")
+    if(username === "marco" && password === "123")
         return done(null,{id: 1, name: "Cody"});
     done(null, false);
 }));
